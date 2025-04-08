@@ -74,7 +74,9 @@ class FilamentCommentsServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-comments-styles', __DIR__ . '/../resources/dist/filament-comments.css'),
+            // This is not needed. It contains a duplicate of filament core w/out any customizations, but it isn't
+            // properly wired up and only throws an error. 
+            // Css::make('filament-comments-styles', __DIR__ . '/../resources/dist/filament-comments.css'),
         ];
     }
 
